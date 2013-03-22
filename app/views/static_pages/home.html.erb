@@ -2,7 +2,8 @@
 <div id ="alltweets">
 	<%= Twitter.search("#ruby -rt", lang: "en").results.each do |tweet| %>
 	<div class="tweet">
-		<p><%= image_tag(tweet.profile_image_url) %><%= tweet.text %></p>
+		<% tweetlink = "https://twitter.com/" + tweet.user.screen_name + "/status/" + tweet.id.to_s %>
+		<p><%= image_tag(tweet.profile_image_url) %><%= link_to(tweet.text, tweetlink) %></p>
 		<p class="ago"><%= time_ago_in_words(tweet.created_at) %> ago.</p> 
 		<div class="from">&mdash; @<%= tweet.user.screen_name %></div>
 		</div>
