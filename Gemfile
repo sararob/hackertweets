@@ -8,6 +8,7 @@ gem "cocaine", "~> 0.5.0"
 gem 'twitter'
 gem 'typhoeus', '~> 0.3.3'
 gem 'bootstrap-will_paginate', '0.0.6'
+gem 'tweetstream'
 
 group :production do
   gem 'pg'

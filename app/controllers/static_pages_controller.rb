@@ -19,4 +19,11 @@ class StaticPagesController < ApplicationController
   
   def css
   end
+  
+  def php
+  end
+  
+  def sql
+  end
+
 end

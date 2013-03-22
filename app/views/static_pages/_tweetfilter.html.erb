@@ -1,8 +1,15 @@
 <div class="tweetfilter">
-	<p>Filter by language:
-	<%= link_to 'Ruby', ruby_path %> |
-	<%= link_to 'JavaScript', javas_path %> |
-	<%= link_to 'Python', python_path %> |
-	<%= link_to 'HTML', html_path %> |
-	<%= link_to 'CSS', css_path %> 
-</p></div>
+	<ul class="lang-filter">
+	<li><p>Filter tweets:</li>
+	<li>
+	<div class="btn-group">
+	<button class="btn"><%= link_to 'Ruby', ruby_path %></button>
+	<button class="btn"><%= link_to 'JavaScript', javas_path %></button>
+	<button class="btn"><%= link_to 'Python', python_path %></button>
+	<button class="btn"><%= link_to 'HTML', html_path %></button>
+	<button class="btn"><%= link_to 'CSS', css_path %></button>
+	<button class="btn"><%= link_to 'PHP', php_path %></button>
+	<button class="btn"><%= link_to 'SQL', sql_path %></button>
+	</div></li>
+	</ul>
+</div></p>

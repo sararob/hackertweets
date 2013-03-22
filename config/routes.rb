@@ -9,6 +9,8 @@ Hackertweets::Application.routes.draw do
   get 'python' => "static_pages#python"
   get 'html' => "static_pages#html"
   get 'css' => "static_pages#css"
+  get 'php' => "static_pages#php"
+  get 'sql' => "static_pages#sql"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
