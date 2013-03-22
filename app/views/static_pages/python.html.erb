@@ -1,5 +1,7 @@
+<% provide(:title, 'Python') %>
+<% provide(:h3, 'Python') %>
 <%= render 'tweetfilter' %>
-<h3>Tweets About Python</h3>
+<h3><%= h3(yield(:h3))%></h3>
 	<%= Twitter.search("#python", lang: "en").results.each do |tweet| %>
 	<div class="tweet">
 		<% tweetlink = "https://twitter.com/" + tweet.user.screen_name + "/status/" + tweet.id.to_s %>

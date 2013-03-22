@@ -1,5 +1,7 @@
+<% provide(:title, 'HTML') %>
+<% provide(:h3, 'HTML') %>
 <%= render 'tweetfilter' %>
-<h3>Tweets About HTML</h3>
+<h3><%= h3(yield(:h3))%></h3>
 	<%= Twitter.search("#html", lang: "en").results.each do |tweet| %>
 	<div class="tweet">
 		<% tweetlink = "https://twitter.com/" + tweet.user.screen_name + "/status/" + tweet.id.to_s %>
