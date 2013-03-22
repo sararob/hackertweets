@@ -1,7 +1,6 @@
 <%= render 'tweetfilter' %>
-<h3>Showing all HackerTweets</h3>
-
-	<%= Twitter.search("#ruby OR #javascript OR #python OR #html OR #css", lang: "en").results.each do |tweet| %>
+<h3>Tweets About HTML</h3>
+	<%= Twitter.search("#html", lang: "en").results.each do |tweet| %>
 	<div class="tweet">
 		<% tweetlink = "https://twitter.com/" + tweet.user.screen_name + "/status/" + tweet.id.to_s %>
 		<p><%= image_tag(tweet.profile_image_url) %><%= link_to(tweet.text, tweetlink) %></p>
@@ -10,4 +9,3 @@
 		</div>
 		<br><br>
 	<% end %>
-	

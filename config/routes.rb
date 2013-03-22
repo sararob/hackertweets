@@ -4,6 +4,11 @@ Hackertweets::Application.routes.draw do
   root :to => "static_pages#home"
   
   get 'about' => "static_pages#about"
+  get 'ruby' => "static_pages#ruby"
+  get 'javas' => "static_pages#javas"
+  get 'python' => "static_pages#python"
+  get 'html' => "static_pages#html"
+  get 'css' => "static_pages#css"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
