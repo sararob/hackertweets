@@ -4,3 +4,16 @@ $baseFontFamily: Inder;
 @import "bootstrap";
 
 @import 'bootstrap-responsive';
+
+.tweet {
+	border:1px solid black;
+	margin-left:10px;
+	padding:5px;
+	border-radius:4px;
+	display:inline-block;
+	width:300px;
+}
+
+.ago {
+	font-style:italic;
+}
