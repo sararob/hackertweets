@@ -1,8 +1,8 @@
 <h2>Tweets About Ruby</h2>
 <div id ="alltweets">
-	<%= Twitter.search("#ruby -rt", lang: "en", :count => 10).results.each do |tweet| %>
+	<%= Twitter.search("#ruby -rt", lang: "en").results.each do |tweet| %>
 	<div class="tweet">
-		<p><%= tweet.text %></p>
+		<p><%= image_tag(tweet.profile_image_url) %><%= tweet.text %></p>
 		<p class="ago"><%= time_ago_in_words(tweet.created_at) %> ago.</p> 
 		<div class="from">&mdash; @<%= tweet.user.screen_name %></div>
 		</div>

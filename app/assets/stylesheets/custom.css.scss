@@ -8,12 +8,21 @@ $baseFontFamily: Inder;
 .tweet {
 	border:1px solid black;
 	margin-left:10px;
-	padding:5px;
+	padding:7px;
 	border-radius:4px;
 	display:inline-block;
-	width:300px;
+	width:350px;
+	box-shadow:3px 3px 3px #888;
 }
 
 .ago {
 	font-style:italic;
+}
+
+.tweet img {
+	border:1px solid black;
+	float:left;
+	margin-right:5px;
+	margin-bottom:5px;
+	border-radius:3px;
 }
