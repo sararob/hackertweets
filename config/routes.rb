@@ -4,6 +4,8 @@ Hackertweets::Application.routes.draw do
   root :to => "static_pages#tweets"
   
   get 'tweets(/:tag)' => 'static_pages#tweets', as: :tweets
+  
+  get 'about' => "static_pages#about"
 
 
   # The priority is based upon order of creation:
