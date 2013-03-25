@@ -7,7 +7,7 @@
 		<% displayname = "@" + tweet.user.screen_name %>
 		<% tweetlink = "https://twitter.com/" + tweet.user.screen_name + "/status/" + tweet.id.to_s %>
 		<% userlink = "https://twitter.com/" + tweet.user.screen_name %>
-		<p><%= image_tag(tweet.profile_image_url) %><%= link_to(tweet.text, tweetlink) %></p>
+		<p><%= image_tag(tweet.profile_image_url) %><%= link_to(tweet.text, tweetlink, :target => "_blank") %></p>
 		<p class="ago"><%= time_ago_in_words(tweet.created_at) %> ago.</p> 
 		<div class="from">&mdash; <%= link_to(displayname, userlink, :target => "_blank") %></div>
 		</div>

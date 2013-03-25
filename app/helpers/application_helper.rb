@@ -10,7 +10,7 @@ module ApplicationHelper
   
   def h3(page_h3)
     if page_h3.empty?
-      full_h3 = ""
+      full_h3 = "Showing all HackerTweets"
     else
       full_h3 = "Tweets About" + " #{page_h3}"
     end

@@ -5,25 +5,12 @@ class StaticPagesController < ApplicationController
   def about
   end
   
-  def ruby
-  end
-  
-  def javas
-  end
-  
-  def python
-  end
-  
-  def html
-  end
-  
-  def css
-  end
-  
-  def php
-  end
-  
-  def sql
+  def tweets
+    if params[:tag]
+      @tweets = Twitter.search("#"+ params[:tag], lang: "en", count:30).results
+    else 
+      @tweets = Twitter.search("#ruby OR #rails OR #javascript OR #python OR #html OR #css OR #php OR #sql", lang: "en", count:30).results
+    end
   end
 
 end
