@@ -13,7 +13,7 @@ class StaticPagesController < ApplicationController
     end
 
     if request.xhr?
-      render partial: 'tweets'
+      render partial: 'static_pages/git tweets'
     end
   end
   
