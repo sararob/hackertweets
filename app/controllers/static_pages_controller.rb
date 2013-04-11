@@ -11,6 +11,16 @@ class StaticPagesController < ApplicationController
     else 
       @tweets = Twitter.search("#ruby OR #rails OR #javascript OR #python OR #html OR #css OR #php OR #sql", lang: "en", count:30).results
     end
+
+    if request.xhr?
+      render partial: 'tweets'
+    end
+  end
+  
+  def stream
+    TweetStream::Client.new.track('javascript') do |status|
+      puts "#{status.text}"
+    end
   end
 
 end

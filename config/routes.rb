@@ -1,5 +1,5 @@
 Hackertweets::Application.routes.draw do
-  get "static_pages/home"
+  get 'stream' => "static_pages#stream"
   
   root :to => "static_pages#tweets"
   
@@ -7,6 +7,7 @@ Hackertweets::Application.routes.draw do
   
   get 'about' => "static_pages#about"
 
+  get 'choosefilter' => "static_pages#choosefilter"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

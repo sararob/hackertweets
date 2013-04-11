@@ -3,36 +3,15 @@
 	<ul class="lang-filter">
 	<li><p>Filter tweets:</li>
 	<li>
-	<div class="btn-group">
-	<button class="btn"><%= link_to 'Ruby', tweets_path(tag: "Ruby") %></button>
-	<button class="btn"><%= link_to 'JavaScript', tweets_path(tag: "JavaScript") %></button>
-	<button class="btn"><%= link_to 'Python', tweets_path(tag: "Python") %></button>
-	<button class="btn"><%= link_to 'HTML', tweets_path(tag: "HTML") %></button>
-	<button class="btn"><%= link_to 'CSS', tweets_path(tag: "CSS") %></button>
-	<button class="btn"><%= link_to 'PHP', tweets_path(tag: "PHP") %></button>
-	<button class="btn"><%= link_to 'SQL', tweets_path(tag: "SQL") %></button>
+	<div class="btn-group" id="languages">
+	<%= link_to 'Ruby', tweets_path(tag: "Ruby"), { class: "btn", :'data-remote' => true } %>
+	<%= link_to 'JavaScript', tweets_path(tag: "JavaScript"), { class: "btn", :'data-remote' => true } %>
+	<%= link_to 'Python', tweets_path(tag: "Python"), { class: "btn", :'data-remote' => true } %>
+	<%= link_to 'HTML', tweets_path(tag: "HTML"), { class: "btn", :'data-remote' => true } %>
+	<%= link_to 'CSS', tweets_path(tag: "CSS"), { class: "btn", :'data-remote' => true } %>
+	<%= link_to 'PHP', tweets_path(tag: "PHP"), { class: "btn", :'data-remote' => true } %>
+	<%= link_to 'SQL', tweets_path(tag: "SQL"), { class: "btn", :'data-remote' => true } %>
+	<%= link_to 'jQuery', tweets_path(tag: "jQuery"), { class: "btn", :'data-remote' => true } %>
 	</div></li>
 	</ul>
 </div></p>
-
-
-<!--
-<div class="tweetfilter">
-Filter tweets:
-<div class="btn-group">
-  <button class="btn"><%= link_to 'Language', root_path %></button>
-  <button class="btn dropdown-toggle" data-toggle="dropdown">
-    <span class="caret"></span>
-  </button>
-  	<ul class="dropdown-menu">
-			<li><%= link_to 'Ruby', tweets_path(tag: "Ruby") %></li>
-			<li><%= link_to 'JavaScript', tweets_path(tag: "JavaScript") %></li>
-			<li><%= link_to 'Python', tweets_path(tag: "Python") %></li>
-			<li><%= link_to 'HTML', tweets_path(tag: "HTML") %></li>
-			<li><%= link_to 'CSS', tweets_path(tag: "CSS") %></li>
-			<li><%= link_to 'PHP', tweets_path(tag: "PHP") %></li>
-			<li><%= link_to 'SQL', tweets_path(tag: "SQL") %></li>
-		</ul>
-	</div>
-</div>
--->
