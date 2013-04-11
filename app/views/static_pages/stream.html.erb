@@ -1,0 +1,5 @@
+<h2>Stream here</h2>
+
+<% TweetStream::Client.new.track('javascript') do |status| %>
+  <%= puts "[#{status.user.screen_name}] #[{status.text}]" %>
+<% end %>

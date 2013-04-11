@@ -1,0 +1,6 @@
+<h2>Choose the twitter keywords you'd like to filter</h2>
+<%= form_tag('/choosefilter') do |f| %>
+	<%= label_tag(:keyword, "Keyword") %>
+	<%= text_field_tag(:keyword) %>
+	<%= submit_tag("View tweets") %>
+<% end %>
